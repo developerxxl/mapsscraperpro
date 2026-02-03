@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps Scraper Pro | Professional Business Data Extraction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+    <div id="app" class="min-h-screen flex flex-col selection:bg-blue-100 selection:text-blue-900 bg-white">
+
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="#" class="flex items-center gap-2 cursor-pointer" id="logo-link">
+                        <div class="bg-blue-600 p-1.5 rounded-lg shadow-sm text-white">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-extrabold text-xl tracking-tight text-slate-900">Maps Scraper Pro</span>
+                    </a>
+
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a href="#" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors" id="nav-home">Home</a>
+                        <a href="support.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Support</a>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md flex items-center gap-2">
+                            <i data-lucide="chrome" class="w-[18px] h-[18px]"></i>
+                            Add to Chrome
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow">
+
+            <!-- HOME PAGE -->
+            <div id="page-home">
+                <!-- Hero -->
+                <section class="pt-32 pb-16 lg:pt-48 lg:pb-32">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold mb-6 tracking-wide uppercase">
+                            <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+                            Professional Grade Mapping Tool
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight max-w-4xl mx-auto">
+                            Extract Lead Data from <br/>
+                            <span class="text-blue-600 underline decoration-blue-100 underline-offset-8">Maps with Precision</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                            The most powerful browser extension for business intelligence. Capture Company details, contact info, coordinates, and images in seconds.
+                        </p>
+
+                        <div class="flex flex-col items-center gap-4">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:shadow-2xl flex items-center gap-3 transform hover:-translate-y-0.5 active:translate-y-0">
+                                <i data-lucide="chrome" class="w-[22px] h-[22px]" style="stroke-width:2.5"></i>
+                                Add to Chrome &mdash; Free
+                            </button>
+                            <p class="text-sm text-slate-400 font-medium">No accounts required &bull; One-click CSV export</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features -->
+                <section id="features" class="py-24 bg-slate-50/50 border-y border-slate-100">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-16">
+                            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Complete Data Profiles</h2>
+                            <p class="text-slate-600 max-w-2xl mx-auto">Maps Scraper Pro doesn't just scrape names; it builds full business profiles with 8+ key data points.</p>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8">
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center group hover:border-blue-200 transition-all">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="globe"></i>
+                                </div>
+                                <span class="font-bold text-slate-800 text-sm">Website</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center group hover:border-blue-200 transition-all">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <span class="font-bold text-slate-800 text-sm">Phone</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center group hover:border-blue-200 transition-all">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="bar-chart-2"></i>
+                                </div>
+                                <span class="font-bold text-slate-800 text-sm">Rating & Reviews</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center group hover:border-blue-200 transition-all">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="navigation"></i>
+                                </div>
+                                <span class="font-bold text-slate-800 text-sm">GPS Coordinates</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center group hover:border-blue-200 transition-all">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="image"></i>
+                                </div>
+                                <span class="font-bold text-slate-800 text-sm">Featured Image</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center group hover:border-blue-200 transition-all">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <span class="font-bold text-slate-800 text-sm">Full Address</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center group hover:border-blue-200 transition-all">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="zap"></i>
+                                </div>
+                                <span class="font-bold text-slate-800 text-sm">Live Updates</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 text-center flex flex-col items-center group hover:border-blue-200 transition-all">
+                                <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                                    <i data-lucide="file-spreadsheet"></i>
+                                </div>
+                                <span class="font-bold text-slate-800 text-sm">CSV/Excel Export</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How It Works -->
+                <section id="how-it-works" class="py-24">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="flex flex-col lg:flex-row items-center gap-16">
+                            <div class="lg:w-1/2">
+                                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Streamlined Workflow</h2>
+                                <div class="space-y-12">
+                                    <div class="flex gap-6">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold">1</div>
+                                        <div>
+                                            <h4 class="text-lg font-bold mb-1">Search Businesses</h4>
+                                            <p class="text-slate-500 text-sm leading-relaxed">Open your favorite maps provider and search for any category or area.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-6">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold">2</div>
+                                        <div>
+                                            <h4 class="text-lg font-bold mb-1">Activate Scraper</h4>
+                                            <p class="text-slate-500 text-sm leading-relaxed">Open the Pro extension. It automatically detects all business results including Company Name, Website, and Image URLs.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-6">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold">3</div>
+                                        <div>
+                                            <h4 class="text-lg font-bold mb-1">Download Pack</h4>
+                                            <p class="text-slate-500 text-sm leading-relaxed">One click exports all data including Lat/Long coordinates and Review counts to a clean CSV.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lg:w-1/2 bg-slate-100 rounded-[2.5rem] p-8 lg:p-12 relative overflow-hidden">
+                                <div class="bg-white rounded-2xl shadow-2xl p-6 border border-slate-200">
+                                    <div class="flex items-center justify-between mb-6">
+                                        <div class="h-4 w-32 bg-slate-100 rounded"></div>
+                                        <div class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase">Ready to Export</div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center justify-between text-xs py-2 border-b border-slate-50">
+                                            <span class="text-slate-400">Company Name</span>
+                                            <span class="text-slate-900 font-medium">&#10003; captured</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs py-2 border-b border-slate-50">
+                                            <span class="text-slate-400">Phone Number</span>
+                                            <span class="text-slate-900 font-medium">&#10003; captured</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs py-2 border-b border-slate-50">
+                                            <span class="text-slate-400">Website</span>
+                                            <span class="text-slate-900 font-medium">&#10003; captured</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs py-2 border-b border-slate-50">
+                                            <span class="text-slate-400">Rating</span>
+                                            <span class="text-slate-900 font-medium">&#10003; captured</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs py-2 border-b border-slate-50">
+                                            <span class="text-slate-400">Reviews</span>
+                                            <span class="text-slate-900 font-medium">&#10003; captured</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs py-2 border-b border-slate-50">
+                                            <span class="text-slate-400">Latitude</span>
+                                            <span class="text-slate-900 font-medium">&#10003; captured</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs py-2 border-b border-slate-50">
+                                            <span class="text-slate-400">Longitude</span>
+                                            <span class="text-slate-900 font-medium">&#10003; captured</span>
+                                        </div>
+                                        <div class="flex items-center justify-between text-xs py-2">
+                                            <span class="text-slate-400">Featured Image</span>
+                                            <span class="text-slate-900 font-medium">&#10003; captured</span>
+                                        </div>
+                                    </div>
+                                    <button class="w-full mt-6 py-3 bg-blue-600 text-white rounded-xl font-bold text-sm shadow-lg shadow-blue-200">
+                                        Export 8 Fields to CSV
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="py-24 bg-blue-600 text-white text-center">
+                    <div class="max-w-4xl mx-auto px-4">
+                        <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Built for Professionals</h2>
+                        <p class="text-xl text-blue-100 mb-10 opacity-90">Stop manually copying and pasting. Get clean mapping data today.</p>
+                        <button class="bg-white text-blue-600 hover:bg-slate-50 px-10 py-5 rounded-full text-xl font-bold transition-all shadow-2xl flex items-center gap-3 mx-auto">
+                            <i data-lucide="chrome" class="w-6 h-6" style="stroke-width:2.5"></i>
+                            Install Extension
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- TERMS PAGE -->
+            <div id="page-terms" class="hidden">
+                <section class="pt-32 pb-24 max-w-3xl mx-auto px-4">
+                    <h1 class="text-4xl font-bold mb-8">Terms of Service</h1>
+                    <div class="prose prose-slate text-slate-600 space-y-6">
+                        <p>By using Maps Scraper Pro, you agree to the following terms:</p>
+                        <h3 class="text-xl font-bold text-slate-900">1. Usage License</h3>
+                        <p>We grant you a personal, non-exclusive license to use the extension for data extraction purposes.</p>
+                        <h3 class="text-xl font-bold text-slate-900">2. Ethical Scraping</h3>
+                        <p>Users are responsible for ensuring their use of the tool complies with local laws and target website terms.</p>
+                        <h3 class="text-xl font-bold text-slate-900">3. Disclaimer</h3>
+                        <p>Maps Scraper Pro is provided "as is." We are not responsible for service interruptions caused by third-party map providers.</p>
+                        <h3 class="text-xl font-bold text-slate-900">4. Support</h3>
+                        <p>Support is provided via our <a href="support.html" class="text-blue-600 hover:underline">Support Center</a> or email at info@mapsscraperpro.com.</p>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="py-12 border-t border-slate-100 bg-slate-50 mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <a href="#" class="flex items-center gap-2 cursor-pointer" id="footer-logo">
+                        <div class="bg-blue-600 p-1 rounded-lg text-white">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </div>
+                        <span class="font-bold text-lg tracking-tight text-slate-900">Maps Scraper Pro</span>
+                    </a>
+
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium text-slate-500">
+                        <a href="privacy.html" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                        <a href="#terms" class="hover:text-blue-600 transition-colors" id="nav-terms">Terms of Service</a>
+                        <a href="support.html" class="hover:text-blue-600 transition-colors">Support</a>
+                    </div>
+
+                    <p class="text-sm text-slate-400">
+                        &copy; <span id="year"></span> Maps Scraper Pro. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Home button (visible on non-home pages) -->
+        <a href="#" id="back-btn" class="hidden fixed bottom-8 left-8 bg-white border border-slate-200 text-slate-600 px-4 py-2 rounded-full shadow-lg flex items-center gap-2 text-sm font-bold hover:bg-slate-50 transition-all z-40">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            Back to Home
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

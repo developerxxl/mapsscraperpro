@@ -1,0 +1,9 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Feedback page styles */
+.option-selected {
+    border-color: #2563eb !important;
+    background-color: #eff6ff !important;
+}

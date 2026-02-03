@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Maps Scraper Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="bg-blue-600 p-1.5 rounded-lg shadow-sm text-white">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900">Maps Scraper Pro</span>
+                </a>
+                
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="support.html" class="text-sm font-medium text-blue-600">Support</a>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md flex items-center gap-2">
+                        <i data-lucide="chrome" class="w-[18px] h-[18px]"></i>
+                        Add to Chrome
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-24 max-w-3xl mx-auto px-4 w-full">
+        <div class="bg-blue-50 p-12 rounded-[3rem] border border-blue-100 text-center mb-12">
+            <div class="w-20 h-20 bg-blue-600 text-white rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-xl">
+                <i data-lucide="mail" style="width: 40px; height: 40px;"></i>
+            </div>
+            <h1 class="text-4xl font-bold mb-4 text-slate-900">Get Support</h1>
+            <p class="text-xl text-slate-600 mb-8 max-w-md mx-auto">
+                Need help or have a feature request? Our team is ready to assist.
+            </p>
+            <div class="bg-white p-6 rounded-2xl shadow-sm inline-block border border-blue-100">
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Direct Email</p>
+                <a href="mailto:info@mapsscraperpro.com" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                    info@mapsscraperpro.com
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-2xl">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i data-lucide="zap" class="text-yellow-400 w-5 h-5"></i>
+                Extension Owner Tools
+            </h2>
+            <p class="text-slate-400 text-sm mb-6">Use the link below in your Chrome Extension Dashboard to send users to the feedback page when they uninstall.</p>
+            
+            <div class="space-y-4">
+                <label class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Uninstall URL (feedback.html)</label>
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <div id="uninstall-url" class="flex-grow bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm font-mono text-blue-300 truncate">
+                        <!-- Populated by script -->
+                    </div>
+                    <button 
+                        id="copy-btn"
+                        class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-3 rounded-xl flex items-center justify-center gap-2 transition-all font-bold text-sm shrink-0"
+                    >
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                        <span id="btn-text">Copy Link</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 text-slate-500 hover:text-blue-600 font-bold transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                Back to Home
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-100 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="bg-blue-600 p-1 rounded-lg text-white">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-bold text-lg tracking-tight text-slate-900">Maps Scraper Pro</span>
+                </a>
+                
+                <div class="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium text-slate-500">
+                    <a href="privacy.html" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                    <a href="index.html#terms" class="hover:text-blue-600 transition-colors">Terms of Service</a>
+                    <a href="support.html" class="hover:text-blue-600 transition-colors">Support</a>
+                </div>
+                
+                <p class="text-sm text-slate-400">
+                    © <span id="year"></span> Maps Scraper Pro. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Populate dynamic URL
+        const uninstallUrl = window.location.href.replace('support.html', 'feedback.html');
+        document.getElementById('uninstall-url').textContent = uninstallUrl;
+
+        // Copy functionality
+        const copyBtn = document.getElementById('copy-btn');
+        const btnText = document.getElementById('btn-text');
+        
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(uninstallUrl).then(() => {
+                btnText.textContent = 'Copied!';
+                copyBtn.classList.replace('bg-blue-600', 'bg-green-600');
+                setTimeout(() => {
+                    btnText.textContent = 'Copy Link';
+                    copyBtn.classList.replace('bg-green-600', 'bg-blue-600');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

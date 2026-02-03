@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uninstall Feedback | Maps Scraper Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col items-center justify-center p-4">
+    <div id="feedback-card" class="bg-white w-full max-w-2xl p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-xl transition-all duration-500">
+        <div class="flex items-center gap-4 mb-8">
+            <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-2xl flex items-center justify-center">
+                <i data-lucide="message-square"></i>
+            </div>
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900">We're sorry to see you go</h1>
+                <p class="text-slate-500">Could you tell us why you uninstalled Maps Scraper Pro?</p>
+            </div>
+        </div>
+
+        <form id="feedback-form" class="space-y-6">
+            <div class="space-y-3">
+                <label class="text-sm font-bold text-slate-700 block">Reason for uninstalling:</label>
+                <div class="grid grid-cols-1 gap-2" id="options-container">
+                    <label class="option-item flex items-center gap-3 p-4 border border-slate-100 rounded-xl cursor-pointer transition-all bg-slate-50 hover:border-slate-200">
+                        <input type="radio" name="reason" value="Difficult to use" class="w-4 h-4 text-blue-600" required>
+                        <span class="text-sm font-medium text-slate-700">It was too difficult to use</span>
+                    </label>
+                    <label class="option-item flex items-center gap-3 p-4 border border-slate-100 rounded-xl cursor-pointer transition-all bg-slate-50 hover:border-slate-200">
+                        <input type="radio" name="reason" value="Missing features" class="w-4 h-4 text-blue-600">
+                        <span class="text-sm font-medium text-slate-700">Missing features I needed</span>
+                    </label>
+                    <label class="option-item flex items-center gap-3 p-4 border border-slate-100 rounded-xl cursor-pointer transition-all bg-slate-50 hover:border-slate-200">
+                        <input type="radio" name="reason" value="Bugs" class="w-4 h-4 text-blue-600">
+                        <span class="text-sm font-medium text-slate-700">Encountered bugs or errors</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <label class="text-sm font-bold text-slate-700 block">How can we improve? (Optional)</label>
+                <textarea 
+                    name="comments"
+                    class="w-full h-32 p-4 bg-slate-50 border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all text-sm"
+                    placeholder="Tell us more about your experience..."
+                ></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-blue-200 transition-all flex items-center justify-center gap-2">
+                Submit Feedback
+            </button>
+        </form>
+    </div>
+
+    <div id="success-card" class="hidden bg-white w-full max-w-xl p-12 rounded-[2.5rem] border border-slate-100 shadow-xl text-center transform scale-95 transition-all duration-500">
+        <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
+            <i data-lucide="check-circle-2" style="width: 40px; height: 40px;"></i>
+        </div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Thank you!</h2>
+        <p class="text-slate-600 mb-10 text-lg">Your feedback helps us make the extension better.</p>
+        <a href="index.html" class="text-blue-600 font-bold hover:underline inline-flex items-center gap-2">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            Back to our homepage
+        </a>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        const options = document.querySelectorAll('.option-item');
+        options.forEach(option => {
+            const input = option.querySelector('input');
+            input.addEventListener('change', () => {
+                options.forEach(opt => opt.classList.remove('option-selected'));
+                if (input.checked) option.classList.add('option-selected');
+            });
+        });
+
+        const form = document.getElementById('feedback-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('feedback-card').classList.add('opacity-0');
+            setTimeout(() => {
+                document.getElementById('feedback-card').classList.add('hidden');
+                document.getElementById('success-card').classList.remove('hidden');
+                setTimeout(() => document.getElementById('success-card').classList.add('scale-100'), 50);
+            }, 300);
+        });
+    </script>
+</body>
+</html>

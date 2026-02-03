@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Maps Scraper Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="bg-blue-600 p-1.5 rounded-lg shadow-sm text-white">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900">Maps Scraper Pro</span>
+                </a>
+                
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="support.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Support</a>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md flex items-center gap-2">
+                        <i data-lucide="chrome" class="w-[18px] h-[18px]"></i>
+                        Add to Chrome
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-24 max-w-3xl mx-auto px-4 w-full">
+        <h1 class="text-4xl font-bold mb-8 text-slate-900">Privacy Policy</h1>
+        <div class="prose prose-slate text-slate-600 space-y-8 leading-relaxed">
+            <p class="text-lg">At Maps Scraper Pro, we take your privacy seriously. This policy explains how we handle data and protect your digital footprint.</p>
+            
+            <section class="space-y-4">
+                <h3 class="text-xl font-bold text-slate-900">1. Local Processing</h3>
+                <p>Our extension performs all data extraction and processing locally within your browser. We do not transmit the business data you scrape to our servers. Your data stays on your machine until you choose to export it.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h3 class="text-xl font-bold text-slate-900">2. No Tracking</h3>
+                <p>We do not track your browsing history or collect any personal information about your usage of the maps services you visit. We believe in tools that work for you, not against your privacy.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h3 class="text-xl font-bold text-slate-900">3. Data Security</h3>
+                <p>The scraped data is temporarily stored in your browser's memory and is cleared once you close the tab or export the CSV. We do not maintain any persistent database of your extracted leads.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h3 class="text-xl font-bold text-slate-900">4. Third-Party Services</h3>
+                <p>While our extension interacts with map providers, it does not share your account information or any identifiable data with them beyond what is necessary for the standard web request to function.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h3 class="text-xl font-bold text-slate-900">5. Contact</h3>
+                <p>For any privacy-related questions or concerns, please contact our privacy officer at <strong>info@mapsscraperpro.com</strong>.</p>
+            </section>
+        </div>
+
+        <div class="mt-12 pt-12 border-t border-slate-100 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 text-slate-500 hover:text-blue-600 font-bold transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                Back to Home
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-100 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="bg-blue-600 p-1 rounded-lg text-white">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-bold text-lg tracking-tight text-slate-900">Maps Scraper Pro</span>
+                </a>
+                
+                <div class="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium text-slate-500">
+                    <a href="privacy.html" class="text-blue-600 font-bold">Privacy Policy</a>
+                    <a href="index.html#terms" class="hover:text-blue-600 transition-colors">Terms of Service</a>
+                    <a href="support.html" class="hover:text-blue-600 transition-colors">Support</a>
+                </div>
+                
+                <p class="text-sm text-slate-400">
+                    © <span id="year"></span> Maps Scraper Pro. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
