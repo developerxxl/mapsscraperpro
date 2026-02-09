@@ -12,62 +12,90 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-slate-50 min-h-screen flex flex-col items-center justify-center p-4">
-    <div id="feedback-card" class="bg-white w-full max-w-2xl p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-xl transition-all duration-500">
-        <div class="flex items-center gap-4 mb-8">
-            <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-2xl flex items-center justify-center">
-                <i data-lucide="message-square"></i>
-            </div>
-            <div>
-                <h1 class="text-3xl font-bold text-slate-900">We're sorry to see you go</h1>
-                <p class="text-slate-500">Could you tell us why you uninstalled Maps Scraper Pro?</p>
-            </div>
-        </div>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-5xl flex flex-col lg:flex-row items-start gap-6">
 
-        <form id="feedback-form" class="space-y-6">
-            <div class="space-y-3">
-                <label class="text-sm font-bold text-slate-700 block">Reason for uninstalling:</label>
-                <div class="grid grid-cols-1 gap-2" id="options-container">
-                    <label class="option-item flex items-center gap-3 p-4 border border-slate-100 rounded-xl cursor-pointer transition-all bg-slate-50 hover:border-slate-200">
-                        <input type="radio" name="reason" value="Difficult to use" class="w-4 h-4 text-blue-600" required>
-                        <span class="text-sm font-medium text-slate-700">It was too difficult to use</span>
-                    </label>
-                    <label class="option-item flex items-center gap-3 p-4 border border-slate-100 rounded-xl cursor-pointer transition-all bg-slate-50 hover:border-slate-200">
-                        <input type="radio" name="reason" value="Missing features" class="w-4 h-4 text-blue-600">
-                        <span class="text-sm font-medium text-slate-700">Missing features I needed</span>
-                    </label>
-                    <label class="option-item flex items-center gap-3 p-4 border border-slate-100 rounded-xl cursor-pointer transition-all bg-slate-50 hover:border-slate-200">
-                        <input type="radio" name="reason" value="Bugs" class="w-4 h-4 text-blue-600">
-                        <span class="text-sm font-medium text-slate-700">Encountered bugs or errors</span>
-                    </label>
+        <!-- Sidebar: Extension Download -->
+        <aside class="w-full lg:w-72 flex-shrink-0 order-2 lg:order-1">
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-md">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
+                        <i data-lucide="download"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-sm">Try Our Other Extension</h3>
                 </div>
+                <p class="text-xs text-slate-500 mb-5 leading-relaxed">Looking for a Google Maps scraper? Get our powerful Chrome extension for free.</p>
+                <a href="https://maxsheets.gumroad.com/l/googlemapsscraper" target="_blank" rel="noopener" class="flex items-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-xl text-sm font-bold transition-all shadow-md text-center justify-center mb-3">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    Google Maps Scraper
+                </a>
+                <a href="https://chromewebstore.google.com/detail/maps-scraper-map-leads-ex/enbnkgnmjmjohahcfankgkhlpmdpddjm" target="_blank" rel="noopener" class="flex items-center gap-2 w-full bg-white border border-slate-200 hover:border-blue-300 text-slate-700 px-4 py-3 rounded-xl text-sm font-bold transition-all text-center justify-center">
+                    <i data-lucide="map" class="w-4 h-4 text-blue-500"></i>
+                    Bing Maps Scraper
+                </a>
+                <p class="text-[10px] text-slate-400 mt-3 text-center">Both extensions are 100% free</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 order-1 lg:order-2">
+            <div id="feedback-card" class="bg-white w-full p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-xl transition-all duration-500">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-2xl flex items-center justify-center">
+                        <i data-lucide="message-square"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold text-slate-900">We're sorry to see you go</h1>
+                        <p class="text-slate-500">Could you tell us why you uninstalled Maps Scraper Pro?</p>
+                    </div>
+                </div>
+
+                <form id="feedback-form" class="space-y-6">
+                    <div class="space-y-3">
+                        <label class="text-sm font-bold text-slate-700 block">Reason for uninstalling:</label>
+                        <div class="grid grid-cols-1 gap-2" id="options-container">
+                            <label class="option-item flex items-center gap-3 p-4 border border-slate-100 rounded-xl cursor-pointer transition-all bg-slate-50 hover:border-slate-200">
+                                <input type="radio" name="reason" value="Difficult to use" class="w-4 h-4 text-blue-600" required>
+                                <span class="text-sm font-medium text-slate-700">It was too difficult to use</span>
+                            </label>
+                            <label class="option-item flex items-center gap-3 p-4 border border-slate-100 rounded-xl cursor-pointer transition-all bg-slate-50 hover:border-slate-200">
+                                <input type="radio" name="reason" value="Missing features" class="w-4 h-4 text-blue-600">
+                                <span class="text-sm font-medium text-slate-700">Missing features I needed</span>
+                            </label>
+                            <label class="option-item flex items-center gap-3 p-4 border border-slate-100 rounded-xl cursor-pointer transition-all bg-slate-50 hover:border-slate-200">
+                                <input type="radio" name="reason" value="Bugs" class="w-4 h-4 text-blue-600">
+                                <span class="text-sm font-medium text-slate-700">Encountered bugs or errors</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <label class="text-sm font-bold text-slate-700 block">How can we improve? (Optional)</label>
+                        <textarea
+                            name="comments"
+                            class="w-full h-32 p-4 bg-slate-50 border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all text-sm"
+                            placeholder="Tell us more about your experience..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-blue-200 transition-all flex items-center justify-center gap-2">
+                        Submit Feedback
+                    </button>
+                </form>
             </div>
 
-            <div class="space-y-3">
-                <label class="text-sm font-bold text-slate-700 block">How can we improve? (Optional)</label>
-                <textarea 
-                    name="comments"
-                    class="w-full h-32 p-4 bg-slate-50 border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all text-sm"
-                    placeholder="Tell us more about your experience..."
-                ></textarea>
+            <div id="success-card" class="hidden bg-white w-full p-12 rounded-[2.5rem] border border-slate-100 shadow-xl text-center transform scale-95 transition-all duration-500">
+                <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
+                    <i data-lucide="check-circle-2" style="width: 40px; height: 40px;"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Thank you!</h2>
+                <p class="text-slate-600 mb-10 text-lg">Your feedback helps us make the extension better.</p>
+                <a href="index.html" class="text-blue-600 font-bold hover:underline inline-flex items-center gap-2">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    Back to our homepage
+                </a>
             </div>
-
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-blue-200 transition-all flex items-center justify-center gap-2">
-                Submit Feedback
-            </button>
-        </form>
-    </div>
-
-    <div id="success-card" class="hidden bg-white w-full max-w-xl p-12 rounded-[2.5rem] border border-slate-100 shadow-xl text-center transform scale-95 transition-all duration-500">
-        <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
-            <i data-lucide="check-circle-2" style="width: 40px; height: 40px;"></i>
         </div>
-        <h2 class="text-3xl font-bold text-slate-900 mb-4">Thank you!</h2>
-        <p class="text-slate-600 mb-10 text-lg">Your feedback helps us make the extension better.</p>
-        <a href="index.html" class="text-blue-600 font-bold hover:underline inline-flex items-center gap-2">
-            <i data-lucide="arrow-left" class="w-4 h-4"></i>
-            Back to our homepage
-        </a>
     </div>
 
     <script>
